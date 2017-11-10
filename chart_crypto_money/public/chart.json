@@ -1,0 +1,60 @@
+{
+  "chart": {
+    "enabled": true,
+    "title": {
+      "enabled": true,
+      "text": "Line Chart DateTime Scale"
+    },
+    "credits": {
+      "enabled": false
+    },
+    "xScale": 0,
+    "yScale": 1,
+    "container":"container",
+    "series": [],
+    "xAxes": [
+      {
+        "enabled": true,
+        "labels": {
+          "enabled": true,
+          "hAlign": "center",
+          "width": 60
+        }
+      }
+    ],
+    "yAxes": [
+      {}
+    ],
+    "scales": [
+      {
+        "type": "date-time",
+        "maximum": null,
+        "minimum": null,
+        "minimumGap": 0.1,
+        "maximumGap": 0.1,
+        "softMinimum": null,
+        "softMaximum": null,
+        "maxTicksCount": 1000,
+        "ticks": {
+          "interval": "P2D"
+        },
+        "minorTicks": {
+          "count": 1
+        }
+      },
+      {
+        "type": "log",
+        "minimum": 1,
+        "ticks": {
+          "mode": "logarithmic"
+        },
+        "minorTicks": {
+          "mode": "logarithmic"
+        },
+        "comparisonMode": "none",
+        "logBase": 10
+      }
+    ],
+    "type": "line"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="application">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Graficos</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.6.4/angular-animate.min.js"></script>
+    <script rel="stylesheet" href="https://cdn.anychart.com/releases/8.0.0/css/anychart-ui.min.css"></script>
+    <script rel="stylesheet" href="https://cdn.anychart.com/releases/8.0.0/fonts/css/anychart.min.css"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"></link>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css"></link>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-stock.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-ui.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body ng-controller="navController">
+    <header class="top" role="header">
+            <div id="navbar" class="navbar-collapse collapse">
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                    <ul class="navbar-nav nav">
+                        <li class="active" id="ETH"><a href="#ETH">ETH</a></li>
+                        <li id="BTC"><a href="#BTC">BTC</a></li>
+                        <li id="DASH"><a href="#DASH">DASH</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <br><br><br>
+    <div class="container">
+        <button ng-click="changechart()" class="btn btn-primary pull-right">{{button}}</button>
+        <div ng-view="" id="ng-view" class="slide-animation"></div>
+    </div>
+</body>
+</html>
