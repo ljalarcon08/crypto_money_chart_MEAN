@@ -4,7 +4,7 @@ MEAN - Anychart - crypto money chart
 Debe estar instalado:
 
 1. Node JS 8.7.0 (y su variable global)
-2. MongoDB 3.4.10
+2. MongoDB 3.4.10 (uso de puerto por defecto)
 
 Instalación:
 
