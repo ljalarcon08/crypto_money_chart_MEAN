@@ -1,5 +1,8 @@
 # crypto_money_chart_MEAN
-MEAN - Anychart - crypto money chart
+
+Graficos de cambios de precios (U$) en cryptomonedas (Etherium - Bitcoin - Dash) por minuto en la ultima hora.
+
+MEAN - Anychart - Socket.io
 
 Debe estar instalado:
 
