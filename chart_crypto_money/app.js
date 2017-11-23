@@ -9,9 +9,10 @@ var morgan=require('morgan');
 var types=['ETH','BTC','DASH'];
 var chartjson=require('./public/chart.json');
 var fs=require('fs');
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 app.use(express.static(__dirname+'/public'));
 app.use(morgan('dev'));
-
 
 
 //pagina
@@ -138,7 +139,28 @@ function initialData(type){
 	});
 }
 
-app.listen(3000,()=>{
+io.on('connection',(socket)=>{
+	var type='ETH';
+	//console.log('!!');
+	socket.on('act_type',(data)=>{
+		//console.log('TYPE:');
+		//console.log(data);
+		type=data;
+		setInterval(()=>{
+			//console.log(type);
+			PriceModel.getAllByType(type,(rows)=>{
+		 		var chart_json=chart(rows,type);
+				socket.emit('update',chart_json);
+			});
+		},30000);
+		/*PriceModel.getAllByType(type,(rows)=>{
+		 	var chart_json=chart(rows,type);
+			socket.emit('update',chart_json);
+		});*/
+	});
+});
+
+server.listen(3000,()=>{
 	//carga inicial
 	checkData();
 });

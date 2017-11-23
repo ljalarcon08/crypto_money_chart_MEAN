@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/1.6.4/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
     <script rel="stylesheet" href="https://cdn.anychart.com/releases/8.0.0/css/anychart-ui.min.css"></script>
     <script rel="stylesheet" href="https://cdn.anychart.com/releases/8.0.0/fonts/css/anychart.min.css"></script>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"></link>
@@ -34,7 +35,7 @@
     </header>
     <br><br><br>
     <div class="container">
-        <button ng-click="changechart()" class="btn btn-primary pull-right">{{button}}</button>
+        <button id="boton" ng-click="changechart()" class="btn btn-primary pull-right">{{button}}</button>
         <div ng-view="" id="ng-view" class="slide-animation"></div>
     </div>
 </body>
